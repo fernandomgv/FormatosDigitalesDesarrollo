@@ -1,0 +1,13 @@
+prueba 1: selectedmaps/m1.map 35 130 124 16 GreedySearcher nodemo
+prueba 2: selectedmaps/m1.map 115 50 23 86 GreedySearcher nodemo
+prueba 3: selectedmaps/m2.map 50 57 114 97 GreedySearcher nodemo
+prueba 4: selectedmaps/m3.map 24 99 135 57 GreedySearcher nodemo
+prueba 5: selectedmaps/m4.map 147 72 17 18 GreedySearcher nodemo
+prueba 6: selectedmaps/m6.map 134 136 17 16 GreedySearcher nodemo
+prueba 7: selectedmaps/m7.map 16 16 181 22 GreedySearcher nodemo
+
+//No se la podía LRTA.
+
+selectedmaps/m5.map 147 15 21 14 GreedySearcher nodemo
+selectedmaps/m5.map 148 141 21 14 GreedySearcher nodemo
+selectedmaps/m5.map 21 141 21 14 GreedySearcher nodemo

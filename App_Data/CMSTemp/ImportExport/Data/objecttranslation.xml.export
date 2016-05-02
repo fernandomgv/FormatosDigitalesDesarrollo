@@ -1,0 +1,24 @@
+﻿<objecttranslation version="6.0">
+  <NewDataSet>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>3015</ID>
+      <CodeName>custom.Proyecto</CodeName>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>2962</ID>
+      <CodeName>CMS.MenuItem</CodeName>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>1685</ID>
+      <CodeName>CMS.File</CodeName>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>2954</ID>
+      <CodeName>CMS.Folder</CodeName>
+    </objecttranslation>
+  </NewDataSet>
+</objecttranslation>

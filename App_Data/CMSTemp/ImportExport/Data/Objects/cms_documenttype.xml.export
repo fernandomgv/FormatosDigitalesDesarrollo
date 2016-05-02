@@ -1,0 +1,956 @@
+﻿<cms_documenttype version="6.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>3015</ClassID>
+      <ClassDisplayName>06 - Proyecto</ClassDisplayName>
+      <ClassName>custom.Proyecto</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="custom_Proyecto"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ProyectoID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="TituloProyecto"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="CodigoProyecto"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="30" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="EntidadDesarrolladora"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="EntidadesAsociadas" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Pais"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Lugar"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Fecha" type="xs:dateTime" /&gt;
+              &lt;xs:element name="Beneficiarios" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Duracion"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="20" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Presupuestototal"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="50" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Presupuestosolicitado"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="50" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Tema" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Prioridadcuello" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="ProductodelPrograma" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Resumen"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="imagen" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="website" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="contacto" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="1000" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="imagenmapa" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DireccionED" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="TelefonoED" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="50" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Facebook" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="logoED" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" /&gt;
+              &lt;xs:element name="ImagenListado" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="EntidadeAsociada2" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="logoEA1" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="logoEA2" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="EntidadAsociada1" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//custom_Proyecto" /&gt;
+      &lt;xs:field xpath="ProyectoID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="ProyectoID" fieldcaption="ProyectoID" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="true" system="false" publicfield="false" spellcheck="true" guid="08901b6c-efb7-4e4e-9617-ed8261de1bc3" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="General" /&gt;&lt;field column="TituloProyecto" fieldcaption="Titulo" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="1dd113e0-5fae-435c-b300-44628cfcb685" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CodigoProyecto" fieldcaption="Código de Proyecto" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="30" publicfield="false" spellcheck="true" guid="345607b2-96f6-457a-bf6e-4b84a02cc497" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Pais" fieldcaption="País(es)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="100" publicfield="false" spellcheck="true" guid="9436222e-a055-42d9-815f-704599bddda6" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;multiplechoicecontrol&lt;/controlname&gt;&lt;repeatdirection&gt;vertical&lt;/repeatdirection&gt;&lt;options&gt;&amp;lt;item value="Bolivia" text="Bolivia" /&amp;gt;&amp;lt;item value="Colombia" text="Colombia" /&amp;gt;&amp;lt;item value="Ecuador" text="Ecuador" /&amp;gt;&amp;lt;item value="Peru" text="Peru" /&amp;gt;&lt;/options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Lugar" fieldcaption="Lugar" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="7f20e507-396a-408c-a73c-6ad6d43d8014" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Fecha" fieldcaption="Fecha" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="aa0280c2-67d8-402d-8b6e-57333ca14f0c" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;displayNow&gt;true&lt;/displayNow&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;editTime&gt;true&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Beneficiarios" fieldcaption="Beneficiarios" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="2b0ec7f4-75a7-4e9d-915d-8d1b8ffea8b0" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Duracion" fieldcaption="Duración (meses)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="20" publicfield="false" spellcheck="true" guid="d4dbf18c-0231-4fbc-abc5-053ebb403abd" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Presupuestototal" fieldcaption="Presupuesto total (USD)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="50" publicfield="false" spellcheck="true" guid="4058a5d6-8369-4b38-8dc6-6974dec6048a" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Presupuestosolicitado" fieldcaption="Presupuesto solicitado (USD)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="50" publicfield="false" spellcheck="true" guid="cfc8cf6d-82aa-4ac4-b3ba-ec4a1d6850ec" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Tema" fieldcaption="Tema" visible="false" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="073b84c4-8c8a-4dc3-825d-189f746888d9" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Dialogs_Web_Hide&gt;False&lt;/Dialogs_Web_Hide&gt;&lt;Dialogs_Attachments_Hide&gt;False&lt;/Dialogs_Attachments_Hide&gt;&lt;Dialogs_Libraries_Site&gt;##all##&lt;/Dialogs_Libraries_Site&gt;&lt;Dialogs_Anchor_Hide&gt;False&lt;/Dialogs_Anchor_Hide&gt;&lt;Dialogs_Libraries_Hide&gt;False&lt;/Dialogs_Libraries_Hide&gt;&lt;CSSStylesheet&gt;CorporateSite&lt;/CSSStylesheet&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;Dialogs_Email_Hide&gt;False&lt;/Dialogs_Email_Hide&gt;&lt;Dialogs_Content_Site&gt;##all##&lt;/Dialogs_Content_Site&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Prioridadcuello" fieldcaption="Prioridad-cuello de botella que alivia" visible="false" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="a1d25aa8-940b-4bbe-a6df-1d85718ed67d" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Dialogs_Web_Hide&gt;False&lt;/Dialogs_Web_Hide&gt;&lt;Dialogs_Attachments_Hide&gt;False&lt;/Dialogs_Attachments_Hide&gt;&lt;Dialogs_Libraries_Site&gt;##all##&lt;/Dialogs_Libraries_Site&gt;&lt;Dialogs_Anchor_Hide&gt;False&lt;/Dialogs_Anchor_Hide&gt;&lt;Dialogs_Libraries_Hide&gt;False&lt;/Dialogs_Libraries_Hide&gt;&lt;CSSStylesheet&gt;CorporateSite&lt;/CSSStylesheet&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;Dialogs_Email_Hide&gt;False&lt;/Dialogs_Email_Hide&gt;&lt;Dialogs_Content_Site&gt;##all##&lt;/Dialogs_Content_Site&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ProductodelPrograma" fieldcaption="Producto del Programa MFS" visible="false" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="25aad4e1-1d4c-45ee-8035-2be98175730e" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Dialogs_Web_Hide&gt;False&lt;/Dialogs_Web_Hide&gt;&lt;Dialogs_Attachments_Hide&gt;False&lt;/Dialogs_Attachments_Hide&gt;&lt;Dialogs_Libraries_Site&gt;##all##&lt;/Dialogs_Libraries_Site&gt;&lt;Dialogs_Anchor_Hide&gt;False&lt;/Dialogs_Anchor_Hide&gt;&lt;Dialogs_Libraries_Hide&gt;False&lt;/Dialogs_Libraries_Hide&gt;&lt;CSSStylesheet&gt;CorporateSite&lt;/CSSStylesheet&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;Dialogs_Email_Hide&gt;False&lt;/Dialogs_Email_Hide&gt;&lt;Dialogs_Content_Site&gt;##all##&lt;/Dialogs_Content_Site&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Resumen" fieldcaption="Resumen" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="241dff0c-291f-4312-8f7f-fa616dfc26c4" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;dialogs_libraries_site&gt;##all##&lt;/dialogs_libraries_site&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;cssstylesheet&gt;CorporateSite&lt;/cssstylesheet&gt;&lt;dialogs_content_site&gt;##all##&lt;/dialogs_content_site&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="imagenmapa" fieldcaption="imagen mapa (210*331)" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="2b177c72-5026-42d8-a157-7a43e5ff18de" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Autoresize_Width&gt;210&lt;/Autoresize_Width&gt;&lt;Autoresize&gt;custom&lt;/Autoresize&gt;&lt;Autoresize_MaxSideSize&gt;210&lt;/Autoresize_MaxSideSize&gt;&lt;Extensions&gt;inherit&lt;/Extensions&gt;&lt;Autoresize_Height&gt;331&lt;/Autoresize_Height&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Allowed_Extensions&gt;ppsx;pdf;doc;docx;ppt;pptx;xls;xlsx;htm;html;xml;bmp;gif;jpg;jpeg;png;wav;wma;wmv;mp3;mp4;mpg;mpeg;mov;avi;swf;rar;zip;txt;flv;exe&lt;/Allowed_Extensions&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="imagen" fieldcaption="Imagen-Interna Proyecto (ancho máximo: 480)" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="521cc3da-0e7d-4e40-b6ad-31e416ca2d01" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Autoresize_Width&gt;480&lt;/Autoresize_Width&gt;&lt;Autoresize&gt;custom&lt;/Autoresize&gt;&lt;Autoresize_MaxSideSize&gt;480&lt;/Autoresize_MaxSideSize&gt;&lt;Extensions&gt;inherit&lt;/Extensions&gt;&lt;Autoresize_Height&gt;0&lt;/Autoresize_Height&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Allowed_Extensions&gt;ppsx;pdf;doc;docx;ppt;pptx;xls;xlsx;htm;html;xml;bmp;gif;jpg;jpeg;png;wav;wma;wmv;mp3;mp4;mpg;mpeg;mov;avi;swf;rar;zip;txt;flv;exe&lt;/Allowed_Extensions&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ImagenListado" fieldcaption="Imagen-Listado Proyecto (ancho 120px alto 120px)" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="374756ba-ca9d-498e-a77a-f4e7bca3fbdd" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Autoresize_Width&gt;120&lt;/Autoresize_Width&gt;&lt;Autoresize&gt;custom&lt;/Autoresize&gt;&lt;Autoresize_MaxSideSize&gt;120&lt;/Autoresize_MaxSideSize&gt;&lt;Extensions&gt;inherit&lt;/Extensions&gt;&lt;Autoresize_Height&gt;120&lt;/Autoresize_Height&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Allowed_Extensions&gt;ppsx;pdf;doc;docx;ppt;pptx;xls;xlsx;htm;html;xml;bmp;gif;jpg;jpeg;png;wav;wma;wmv;mp3;mp4;mpg;mpeg;mov;avi;swf;rar;zip;txt;flv;exe&lt;/Allowed_Extensions&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Ejecuta" /&gt;&lt;field column="EntidadDesarrolladora" fieldcaption="Entidad Desarrolladora" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="f1b264a1-ac7f-4d77-a8e2-083392285bbe" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DireccionED" fieldcaption="Dirección ED" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="6db8e0a0-107a-4c8f-aea3-fccc17d70711" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="TelefonoED" fieldcaption="Telefono ED" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="50" publicfield="false" spellcheck="true" guid="7e36f701-0599-49cb-a6e0-4e3fca785330" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="contacto" fieldcaption="Contacto ED (Nombre y/o E-mail)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="1000" publicfield="false" spellcheck="true" guid="3ba4a8f4-0613-4bba-a9d5-e0ad3db3737e" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="website" fieldcaption="Web Site" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="2922efa9-c848-4f67-b1b4-f552c20fd3c7" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;IsTextArea&gt;True&lt;/IsTextArea&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Facebook" fieldcaption="Facebook ED" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="c43cf537-18a4-4c6e-a6d8-cacc0e9c5c66" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="logoED" fieldcaption="logo ED (Ancho Maximo 180px)" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="f799d8aa-3beb-4f66-887b-6d1e40f6723d" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Autoresize_Width&gt;180&lt;/Autoresize_Width&gt;&lt;Autoresize&gt;custom&lt;/Autoresize&gt;&lt;Autoresize_MaxSideSize&gt;180&lt;/Autoresize_MaxSideSize&gt;&lt;Extensions&gt;inherit&lt;/Extensions&gt;&lt;Autoresize_Height&gt;0&lt;/Autoresize_Height&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Allowed_Extensions&gt;ppsx;pdf;doc;docx;ppt;pptx;xls;xlsx;htm;html;xml;bmp;gif;jpg;jpeg;png;wav;wma;wmv;mp3;mp4;mpg;mpeg;mov;avi;swf;rar;zip;txt;flv;exe&lt;/Allowed_Extensions&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Entidades Asociadas" /&gt;&lt;field column="EntidadAsociada1" fieldcaption="Entidad Asociada 1 (Nombre)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="5c4ce4f9-c057-4aef-b6d0-5d00e5014383" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EntidadesAsociadas" fieldcaption="Entidad Asociada 1 (Nombre)" visible="false" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="c2417030-fdeb-4f8c-84fa-36b3f0526f6d" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="logoEA1" fieldcaption="logo E. Asociada 1 (Ancho Maximo 180px)" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="b56791d1-5725-48ec-a9a0-4e5ae36fd18e" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Autoresize_Width&gt;180&lt;/Autoresize_Width&gt;&lt;Autoresize&gt;custom&lt;/Autoresize&gt;&lt;Autoresize_MaxSideSize&gt;180&lt;/Autoresize_MaxSideSize&gt;&lt;Extensions&gt;inherit&lt;/Extensions&gt;&lt;Autoresize_Height&gt;0&lt;/Autoresize_Height&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Allowed_Extensions&gt;ppsx;pdf;doc;docx;ppt;pptx;xls;xlsx;htm;html;xml;bmp;gif;jpg;jpeg;png;wav;wma;wmv;mp3;mp4;mpg;mpeg;mov;avi;swf;rar;zip;txt;flv;exe&lt;/Allowed_Extensions&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EntidadeAsociada2" fieldcaption="Entidad Asociada 2 (Nombre)" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" publicfield="false" spellcheck="true" guid="dca191ee-7a5a-4a33-bdca-0a7caaa7a21d" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="logoEA2" fieldcaption="logo E. Asociada 2 (Ancho Maximo 180px)" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="8b00058b-a7f0-4512-9d10-af053e6f1873" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Autoresize_Width&gt;180&lt;/Autoresize_Width&gt;&lt;Autoresize&gt;custom&lt;/Autoresize&gt;&lt;Autoresize_MaxSideSize&gt;180&lt;/Autoresize_MaxSideSize&gt;&lt;Extensions&gt;inherit&lt;/Extensions&gt;&lt;Autoresize_Height&gt;0&lt;/Autoresize_Height&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Allowed_Extensions&gt;ppsx;pdf;doc;docx;ppt;pptx;xls;xlsx;htm;html;xml;bmp;gif;jpg;jpeg;png;wav;wma;wmv;mp3;mp4;mpg;mpeg;mov;avi;swf;rar;zip;txt;flv;exe&lt;/Allowed_Extensions&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource>TituloProyecto</ClassNodeNameSource>
+      <ClassTableName>custom_Proyecto</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2014-09-30T15:40:50.117-05:00</ClassLastModified>
+      <ClassGUID>ccfacabf-934b-4ef6-8704-170aab5ae666</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item searchable="True" name="ProyectoID" tokenized="False" content="False" id="373acf0a-4d11-4237-a222-d826f5b3efa1" /&gt;&lt;item searchable="False" name="TituloProyecto" tokenized="True" content="True" id="d1c47e8e-e1fc-4594-934d-16310eaa7262" /&gt;&lt;item searchable="False" name="CodigoProyecto" tokenized="True" content="True" id="dff57b38-a5a5-4c26-9bfc-fddc2c21f395" /&gt;&lt;item searchable="False" name="EntidadDesarrolladora" tokenized="True" content="True" id="22a839b1-0b14-48c8-ab36-d9cfb4b9c9ba" /&gt;&lt;item searchable="False" name="EntidadesAsociadas" tokenized="True" content="True" id="d4bc7597-7573-4d54-8a7a-663e504e3603" /&gt;&lt;item searchable="False" name="Pais" tokenized="True" content="True" id="21feb7bd-7da2-4141-8797-dce755fe516e" /&gt;&lt;item searchable="False" name="Lugar" tokenized="True" content="True" id="bd366877-3fa1-4579-96f4-3980bd21c460" /&gt;&lt;item searchable="False" name="Beneficiarios" tokenized="True" content="True" id="ed99fdc4-18d3-4586-8960-f2fc0634be08" /&gt;&lt;item searchable="False" name="Duracion" tokenized="True" content="True" id="856515cc-edd2-43fb-a82f-0ea879a9d874" /&gt;&lt;item searchable="False" name="Presupuestototal" tokenized="True" content="True" id="dbca656c-3dbd-4df0-b248-decf8c9ce8c1" /&gt;&lt;item searchable="False" name="Presupuestosolicitado" tokenized="True" content="True" id="3acf890f-6097-4a7b-85c8-ecd1c92ff658" /&gt;&lt;item searchable="False" name="Tema" tokenized="True" content="True" id="4bea077c-1300-4e26-8c42-c36c57d6c2e5" /&gt;&lt;item searchable="False" name="Prioridadcuello" tokenized="True" content="True" id="9619089b-b258-48f9-bb32-720fbe218dd0" /&gt;&lt;item searchable="False" name="ProductodelPrograma" tokenized="True" content="True" id="5ca6b904-c422-4114-a28b-71a851367bbb" /&gt;&lt;item searchable="False" name="Resumen" tokenized="True" content="True" id="95263112-5675-40b5-aee1-2b5a246a07be" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+    </cms_class>
+    <cms_transformation>
+      <TransformationID>2778</TransformationID>
+      <TransformationName>AEAandinaDetalleProyecto</TransformationName>
+      <TransformationCode>&lt;div class="contenido-centro proyectos-single"&gt;
+&lt;div class="titulo-contenido"&gt;&lt;%# Eval("TituloProyecto") %&gt;&lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+        	&lt;div class="detalles-label"&gt;LOCALIZACI&amp;Oacute;N:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("Lugar") %&gt;&lt;/div&gt;
+		&lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;ENTIDAD DESARROLLADORA:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("EntidadDesarrolladora") %&gt;&lt;/div&gt;
+		&lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;PRESUPUESTO TOTAL:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("Presupuestototal") %&gt; &lt;/div&gt;
+		&lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;PRESUPUESTO SOLICITADO:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("Presupuestosolicitado") %&gt; &lt;/div&gt;
+		&lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;PERIODO DE EJECUCI&amp;Oacute;N:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("Duracion") %&gt; meses&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;BENEFICIARIOS:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("Beneficiarios") %&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;WEBSITE:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;a href="http://&lt;%# Eval("website") %&gt;" target="_blank" &gt;&lt;%# Eval("website") %&gt; &lt;/a&gt;&lt;/div&gt;
+		&lt;/div&gt;
+        &lt;div class="detalles clearfix"&gt;
+            &lt;div class="detalles-label"&gt;CONTACTO:&lt;/div&gt;
+            &lt;div class="detalles-texto"&gt;&lt;%# Eval("contacto") %&gt;&lt;/div&gt;
+	&lt;/div&gt;
+        &lt;img class="img-principal" src="&lt;%# GetFileUrl("imagen")%&gt;" alt"" /&gt;
+        &lt;p&gt; &lt;%# Eval("Resumen") %&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="right-side"&gt;
+    
+    &lt;img class="img-mapa" src="&lt;%# GetFileUrl("imagenmapa")%&gt;" alt"" /&gt;
+    &lt;div class="widget-proyectos"&gt;
+            &lt;h6&gt;ENTIDAD DESARROLLADORA&lt;/h6&gt;
+            &lt;div class="widget-cont clearfix"&gt;
+                &lt;a class="entidad" href="#" target="_blank" title=""&gt;&lt;img src="&lt;%# GetFileUrl("logoed")%&gt;" alt"" /&gt;&lt;/a&gt;                
+		&lt;a id="btncontacto" class="verdatos" href="#" target="_blank" title=""&gt;VER DATOS&lt;/a&gt;
+                &lt;div id="element_to_pop_up"&gt;
+		    &lt;a class="b-close"&gt;&lt;a/&gt;
+   	 	    &lt;div class="dirproyecto"&gt;
+                        &lt;div class="detalles clearfix"&gt;
+  			    &lt;div class="detalles-label"&gt;&lt;%# IfEmpty(Eval("DireccionED"),"","Direcci&amp;oacute;n:") %&gt;&lt;/div&gt;
+  			    &lt;div class="detalles-texto"&gt;&lt;%# Eval("DireccionED") %&gt;&lt;/div&gt;
+ 			&lt;/div&gt;
+                        &lt;div class="detalles clearfix"&gt;
+                            &lt;div class="detalles-label"&gt;&lt;%# IfEmpty(Eval("TelefonoED"),"","Tel&amp;eacute;fono:") %&gt;&lt;/div&gt;
+  			    &lt;div class="detalles-texto"&gt;&lt;%# Eval("TelefonoED") %&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+  			&lt;div class="detalles clearfix"&gt;
+  			    &lt;div class="detalles-label"&gt;&lt;%# IfEmpty(Eval("contacto"),"","Contacto:") %&gt;&lt;/div&gt;
+  			    &lt;div class="detalles-texto"&gt;&lt;%# Eval("contacto") %&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+  			&lt;div class="detalles clearfix"&gt;
+  			    &lt;div class="detalles-label"&gt;&lt;%# IfEmpty(Eval("website"),"","Sitio web:") %&gt;&lt;/div&gt;
+  			    &lt;div class="detalles-texto"&gt;&lt;a href="http://&lt;%# Eval("website") %&gt;" target="_blank"&gt;&lt;%# Eval("website") %&gt;&lt;/a&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+  			&lt;div class="detalles clearfix"&gt;
+  			    &lt;div class="detalles-label"&gt;&lt;%# IfEmpty(Eval("Facebook"),"","Facebook:") %&gt;&lt;/div&gt;
+  			    &lt;div class="detalles-texto"&gt;&lt;a href="&lt;%# Eval("Facebook") %&gt;" target="_blank"&gt;Clic aquí&lt;/a&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+		    &lt;/div&gt;
+	        &lt;/div&gt;
+            &lt;/div&gt;
+     &lt;/div&gt;
+        &lt;%# IfEmpty(Eval("EntidadAsociada1"),"","&lt;div class=\"widget-proyectos\"&gt;")%&gt;
+       
+            
+            &lt;%# IfEmpty(Eval("EntidadAsociada1"),"","&lt;h6&gt;ENTIDADES ASOCIADAS&lt;/h6&gt;")%&gt;
+            
+             &lt;%# IfEmpty(Eval("EntidadAsociada1"),"","&lt;div class=\"widget-cont clearfix\"&gt;")%&gt;
+               
+                &lt;%# IfEmpty(Eval("EntidadAsociada1"),"","&lt;img src=\" " + GetFileUrl("logoea1") + "\" alt\"\" /&gt;")%&gt;
+                &lt;%# IfEmpty(Eval("EntidadeAsociada2"),"","&lt;img src=\" " + GetFileUrl("logoea2") + "\" alt\"\" /&gt;")%&gt;
+            
+            &lt;%# IfEmpty(Eval("EntidadAsociada1"),"","&lt;/div&gt;")%&gt;
+        
+        &lt;%# IfEmpty(Eval("EntidadAsociada1"),"","&lt;/div&gt;")%&gt;
+        
+        &lt;div class="widget-proyectos"&gt;
+            &lt;h6&gt;MATERIAL DE DESCARGA&lt;/h6&gt;
+            &lt;div class="widget-cont clearfix"&gt;
+                &lt;a href="&lt;%# Eval("NodeAliasPath")%&gt;/Material-Informativo.aspx" target="_self" class="proyectos-descarga"&gt;
+                    &lt;div class="dld-icon flecha-icon"&gt;&lt;/div&gt;
+                    &lt;div class="dld-txt onerow"&gt;&lt;span&gt;PRESENTACIÓN&lt;/span&gt;&lt;/div&gt;
+                &lt;/a&gt;
+                &lt;a href="&lt;%# Eval("NodeAliasPath")%&gt;/Publicaciones.aspx" target="_self" class="proyectos-descarga"&gt;
+                    &lt;div class="dld-icon public-icon"&gt;&lt;/div&gt;
+                    &lt;div class="public-txt"&gt;&lt;span&gt;DOCUMENTOS TÉCNICOS&lt;/span&gt;&lt;/div&gt;
+                &lt;/a&gt;
+                &lt;a href="&lt;%# Eval("NodeAliasPath")%&gt;/Documentos.aspx" target="_self" class="proyectos-descarga"&gt;
+                    &lt;div class="dld-icon doc-icon"&gt;&lt;/div&gt;
+                    &lt;div class="dld-txt"&gt;&lt;span&gt;EVALUACIÓN Y SISTEMATIZACIÓN&lt;/span&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>6db2e392-bdf4-4cd5-a02a-d42c79118a74</TransformationVersionGUID>
+      <TransformationGUID>d8bc9ce3-85dc-4e10-b9fe-b9d1542c1d1b</TransformationGUID>
+      <TransformationLastModified>2014-09-30T15:40:50.117-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2777</TransformationID>
+      <TransformationName>AEAandinaListaProyecto</TransformationName>
+      <TransformationCode>&lt;div class="proyecto-thumb"&gt;
+    &lt;img src="&lt;%# IfEmpty(Eval("ImagenListado"),GetFileUrl("imagen"),GetFileUrl("ImagenListado"))%&gt;" alt"" /&gt;    
+    &lt;div class="nt-side"&gt;
+         &lt;div class="nt-titulo"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# Eval("TituloProyecto") %&gt;&lt;/a&gt;&lt;/div&gt;
+         &lt;div class="nt-data"&gt;&lt;%# Eval("EntidadDesarrolladora") %&gt;&lt;/div&gt;
+         &lt;div class="nt-text"&gt;&lt;%# StripTags(MyFunctions.TrimText(Eval("Resumen"),400)) %&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="nt-leermas"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;LEER M&amp;Aacute;S&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>11b7891f-ebd1-40f8-9d75-9e54469ee7e3</TransformationVersionGUID>
+      <TransformationGUID>cdf85b45-b987-4a9f-9a22-0562c179a42b</TransformationGUID>
+      <TransformationLastModified>2014-09-08T11:49:51.463-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2737</TransformationID>
+      <TransformationName>Por defecto</TransformationName>
+      <TransformationCode>&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;Titulo:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("TituloProyecto") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Código de Proyecto:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("CodigoProyecto") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Entidad Desarrolladora:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("EntidadDesarrolladora") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Entidades Asociadas:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("EntidadesAsociadas") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;País(es):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Pais") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lugar:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Lugar") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Beneficiarios:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Beneficiarios") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Duración (meses):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Duracion") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Presupuesto total (USD):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Presupuestototal") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Presupuesto solicitado (USD):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Presupuestosolicitado") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tema:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Tema") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prioridad-cuello de botella que alivia:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Prioridadcuello") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Producto del Programa MFS:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("ProductodelPrograma") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Resumen:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Resumen") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>bfdd811e-e83d-49f1-ad8e-e516a11ce1f4</TransformationVersionGUID>
+      <TransformationGUID>9b359195-3f95-4054-b26a-b15c1b487492</TransformationGUID>
+      <TransformationLastModified>2012-06-27T13:00:45.787-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2739</TransformationID>
+      <TransformationName>ProyectoRepeater</TransformationName>
+      <TransformationCode>&lt;Style type="text/css"&gt; 
+  .randomDocumento{
+	text-align: center;
+	padding-right: 5px;	
+	padding-left: 5px;	
+	}
+  .randomDocumento img{
+	width: 160px;
+	border: solid #F0F0F0 5px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	}
+
+   .box-publicacion-TituloProyecto{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 0 5px 0;
+	line-height: 20px;
+	color: #7BC143;
+	text-align: justify;
+	}
+
+   .box-publicacion-resumen{
+	font-size: 11px;
+	font-weight: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 145px;
+	line-height: 18px;
+	text-align: justify ;
+	color: #4B4B4B;
+	}
+   .box-publicacion-autor{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 0 5px 0;
+	line-height: 20px;
+	color: #0068aa;
+	text-align: justify;
+	}
+.NewsPreviewSummary
+{
+margin-left:150px;
+}
+.NewsPreviewTitle
+{
+margin-left:150px;
+}
+.img_noticias_home
+{
+margin-top:-20px;
+}
+&lt;/Style&gt;
+&lt;table cellpadding="2" cellspacing="2" style="width:100%"&gt;
+&lt;tr style="background-color: #7AC142; height:3px;"&gt;
+&lt;td &gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td &gt;
+&lt;div class="NewsPreviewTitle"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# Eval("TituloProyecto") %&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;table&gt;
+  &lt;tbody&gt;&lt;tr&gt;
+   &lt;td&gt;
+
+&lt;%# IfEmpty(Eval("imagen"), "&lt;img class=\"img_noticias_home\" src=\""+ "~/IMGMasterPage/proyectos.aspx" + "\"  width= \" 100 \" height= \" 75 \" /&gt;","&lt;a href=\" " + GetFileUrl("imagen") +" \" class=\"highslide\" onclick=\"return hs.expand(this)\"&gt; &lt;img class=\"img_noticias_home\"  alt=\" " + Eval("imagen")  + " \" src=\" " + GetFileUrl("imagen") + " \" width= \" 140 \"  /&gt; &lt;/a&gt;")%&gt;
+
+
+&lt;div class="highslide-caption"&gt;&lt;%# Eval("TituloProyecto") %&gt; &lt;/div&gt;
+&lt;div id="AgendaFecha" class="box-publicacion-resumen" style="text-align: justify; padding-right: 5px; 
+padding-left: 5px;"&gt;Ejecuta&amp;nbsp&amp;nbsp:&amp;nbsp&amp;nbsp
+&lt;%# Eval("EntidadDesarrolladora") %&gt;
+&lt;/div&gt;&lt;/br&gt;
+&lt;div class="NewsPreviewSummary"&gt;&lt;%# StripTags(MyFunctions.TrimText(Eval("Resumen"),400)) %&gt;&lt;/div&gt;
+
+&lt;div class="textoaladerecha" title="Ampliar la noticia: &lt;%# Eval("TituloProyecto") %&gt;" alt="Ampliar la noticia: &lt;%# Eval("TituloProyecto") %&gt;"&gt;:: &lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;Leer mas&lt;/a&gt; ::&lt;/div&gt;
+&lt;/td&gt;  
+  &lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>4ce707f7-917a-4919-a329-8fe52afc4111</TransformationVersionGUID>
+      <TransformationGUID>7351c16a-fbef-420b-9f72-d539d5ac34ba</TransformationGUID>
+      <TransformationLastModified>2012-07-03T23:46:41.663-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2740</TransformationID>
+      <TransformationName>ProyectoVistaPagina</TransformationName>
+      <TransformationCode>&lt;style type="text/css"&gt;
+   
+  .randomDocumento{
+	text-align: center;
+	padding-right: 5px;	
+	padding-left: 5px;	
+	}
+  .randomDocumento img{
+	width: 160px;
+	border: solid #F0F0F0 5px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	}
+
+   .box-publicacion-titulo{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 0 5px 0;
+	line-height: 20px;
+	/*color: #7BC143;*/
+	color: #237D3E;	
+	text-align: justify;
+	}
+
+   .box-publicacion-resumen{
+	font-size: 11px;
+	font-weight: none;
+	margin-top: -10px;
+	margin-bottom: 5px;
+	line-height: 18px;
+	text-align: justify ;
+	color: #4B4B4B;
+	vertical-align: text-top;
+	}
+.cajaverdetexto ul {
+margin-left: -50px;
+}
+
+&lt;/style&gt;
+&lt;div class="cajaverdecontenido"&gt;
+&lt;table width="100%" style="" cellpadding="2" cellspacing="2" border="0"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;
+            &lt;a class="box-publicacion-titulo"href="&lt;%# GetDocumentUrl() %&gt;" title="&lt;%# Eval("TituloProyecto") %&gt;"&gt; &lt;%# Eval("TituloProyecto") %&gt;&lt;/a&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;div class="cajaverdetexto"&gt;
+&lt;table width="100%" style="text-align: center;" cellpadding="2" cellspacing="2" border="0"&gt;
+   
+ &lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+            
+&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$CodigoProyecto$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("CodigoProyecto") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+ &lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+            &lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$entidaddesarrolladora$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("EntidadDesarrolladora") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+            &lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$EntidadesAsociadas$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("EntidadesAsociadas") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+            &lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$pais$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Pais") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+ &lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+            &lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$Lugar$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Lugar") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+            &lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$Beneficiarios$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Beneficiarios") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+	&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$Duracion$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Duracion") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+	&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$PresupuestoTotal$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Presupuestototal") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+	&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$PresupuestoSolicitado$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Presupuestosolicitado") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+	&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$Tema$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# Eval("Tema") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td style="width:20%" class="box-publicacion-resumen"&gt;
+	&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$fecha$}") %&gt;
+        &lt;/td&gt;
+        &lt;td style="width:2%"&gt;&lt;/td&gt;                
+        &lt;td style="width:70%" class="box-publicacion-titulo"&gt;
+            &lt;%# GetDateTime("Fecha", "dd/MM/yyyy") %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3" align="center"&gt;
+&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;
+&lt;%# IfEmpty(Eval("Imagen"), "&lt;img src=\"" + "~/IMGMasterPage/proyectos.aspx" + "\" /&gt;", GetImage("Imagen", 393)) %&gt;
+&lt;/a&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    
+    &lt;tr class="box-publicacion-titulo"&gt;
+        &lt;td colspan="3"&gt;
+            &lt;div style="text-align: justify; padding-right: 5px; padding-left: 5px;" &gt;
+	&lt;%# CMS.CMSHelper.CMSContext.CurrentResolver.ResolveMacros("{$Resumen$}") %&gt;
+&lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class="box-publicacion-resumen"&gt;
+        &lt;td colspan="3"&gt;
+            &lt;div style="text-align: justify; padding-right: 5px; padding-left: 5px;" &gt;
+&lt;%# Eval("Resumen") %&gt;
+&lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>60f03284-dc52-48e0-af2a-4f571495bd32</TransformationVersionGUID>
+      <TransformationGUID>5d011bff-6230-4f8b-8712-e8a119e4f878</TransformationGUID>
+      <TransformationLastModified>2013-03-25T13:40:09.55-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2741</TransformationID>
+      <TransformationName>RandomProyectos</TransformationName>
+      <TransformationCode>&lt;Style type="text/css"&gt;
+   
+  .randomDocumento{
+	text-align: center;
+	padding-right: 5px;	
+	padding-left: 5px;	
+	}
+  .randomDocumento img{
+	width: 160px;
+	border: solid #F0F0F0 5px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	}
+
+   .box-publicacion-titulo{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 0 5px 0;
+	line-height: 20px;
+	color: #237D3E;
+	text-align: justify;
+	}
+
+   .box-publicacion-resumen{
+	font-size: 11px;
+	font-weight: none;
+	margin-top: -10px;
+	margin-bottom: 5px;
+	line-height: 18px;
+	text-align: justify ;
+	color: #4B4B4B;
+	}
+   .box-publicacion-imagen{
+	width : 65px;
+	height : 200px;
+	}
+
+&lt;/Style&gt;
+
+&lt;div class="randomDocumento"&gt;
+&lt;a class="box-publicacion-titulo" href="&lt;%# GetDocumentUrl() %&gt;" title="&lt;%# Eval("TituloProyecto") %&gt;"&gt;&lt;%# Eval("TituloProyecto") %&gt;&lt;/a&gt;
+&lt;a class="box-publicacion-imagen" href="&lt;%# GetDocumentUrl() %&gt;"&gt;
+&lt;%# IfEmpty(Eval("imagen"), "&lt;img src=\"" + "~/IMGMasterPage/fondo_publicaciones.aspx" + "\" /&gt;", "&lt;img src=\"" + GetFileUrl("imagen") + "\" /&gt;") %&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="agendaresumen" style="text-align: justify; padding-right: 5px; padding-left: 5px;"&gt;
+&lt;%# StripTags(MyFunctions.TrimText(Eval("Resumen"),650))%&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;div class="agendaleermas"&gt;&lt;a class="fecha" href="&lt;%# GetDocumentUrl() %&gt;"&gt;Leer mas&lt;/a&gt;&lt;/div&gt;
+&lt;br /&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>cf3522ea-7956-4930-8f03-3f8277603688</TransformationVersionGUID>
+      <TransformationGUID>b891caa3-f938-43c7-8252-4248c251e928</TransformationGUID>
+      <TransformationLastModified>2012-07-12T11:06:27.177-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2738</TransformationID>
+      <TransformationName>Vista previa</TransformationName>
+      <TransformationCode>&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;Titulo:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("TituloProyecto") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Código de Proyecto:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("CodigoProyecto") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Entidad Desarrolladora:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("EntidadDesarrolladora") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Entidades Asociadas:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("EntidadesAsociadas") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;País(es):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Pais") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lugar:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Lugar") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Beneficiarios:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Beneficiarios") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Duración (meses):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Duracion") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Presupuesto total (USD):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Presupuestototal") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Presupuesto solicitado (USD):&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Presupuestosolicitado") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tema:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Tema") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prioridad-cuello de botella que alivia:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Prioridadcuello") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Producto del Programa MFS:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("ProductodelPrograma") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Resumen:&lt;/td&gt;
+&lt;td&gt;&lt;%# Eval("Resumen") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>3015</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>5248a58c-68b5-4d00-8b3a-bca163381590</TransformationVersionGUID>
+      <TransformationGUID>22aacf04-7d5d-4b76-a223-59bce4eda4da</TransformationGUID>
+      <TransformationLastModified>2012-06-27T13:00:45.803-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_permission>
+      <PermissionID>8008</PermissionID>
+      <PermissionDisplayName>Create Anywhere</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>81fd00a4-9398-487e-91db-311efd189557</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.587-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8013</PermissionID>
+      <PermissionDisplayName>Create</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>d3527f35-98a7-4cbb-be0d-8b5dbe6cc4a6</PermissionGUID>
+      <PermissionLastModified>2014-08-29T17:39:03.62-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to create new documents under documents for which the user has the 'Create' document-level permission.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8009</PermissionID>
+      <PermissionDisplayName>Eliminar</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>015941de-5397-4d33-a27d-8d8eeff94971</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.603-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8010</PermissionID>
+      <PermissionDisplayName>Destruir</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>dfd5259e-f0ba-497a-b590-644e14f401ff</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.637-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8011</PermissionID>
+      <PermissionDisplayName>Hojear el arbol</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>7fe59cc1-79bc-4b7c-b05f-36c3e6654b7e</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.667-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8007</PermissionID>
+      <PermissionDisplayName>Modificar</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>8b5cc875-b8a3-4026-9698-d940d7d7871a</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.557-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8012</PermissionID>
+      <PermissionDisplayName>Modificar permisos</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>13dcd88a-b64d-4991-84df-34aab4c3f1f4</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.697-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>8006</PermissionID>
+      <PermissionDisplayName>Leer</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>3015</ClassID>
+      <PermissionGUID>c42e9d44-5188-434a-bbd5-785d4ca3eeef</PermissionGUID>
+      <PermissionLastModified>2012-06-27T12:51:08.51-05:00</PermissionLastModified>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_allowedchildclasses>
+      <ParentClassID>1685</ParentClassID>
+      <ChildClassID>3015</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>2962</ParentClassID>
+      <ChildClassID>3015</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>3015</ParentClassID>
+      <ChildClassID>2954</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>3015</ParentClassID>
+      <ChildClassID>2962</ChildClassID>
+    </cms_allowedchildclasses>
+  </NewDataSet>
+</cms_documenttype>

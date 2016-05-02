@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="pe_energiayambiente" Class="MFSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PER-DC02\SQLEXPRESS;Initial Catalog=pe_energiayambiente;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="pe_energiayambienteConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PER_PAIS" Member="PER_PAIS">
+    <Type Name="PER_PAIS">
+      <Column Name="CodPais" Type="System.String" DbType="varChar(10)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AbrevPais" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Association Name="PER_PAIS_PER_REGION" Member="PER_REGION" ThisKey="CodPais" OtherKey="CodPais" Type="PER_REGION" />
+      <Association Name="PER_PAIS_MFSProyecto" Member="MFSProyecto" ThisKey="CodPais" OtherKey="AmbitoPais" Type="MFSProyecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_REGION" Member="PER_REGION">
+    <Type Name="PER_REGION">
+      <Column Name="CodRegion" Type="System.String" DbType="varChar(10)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="CodPais" Type="System.String" DbType="varChar(10)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="AbrevRegion" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Association Name="PER_REGION_MFSProyUbicacion" Member="MFSProyUbicacion" ThisKey="CodRegion" OtherKey="AmbitoRegion" Type="MFSProyUbicacion" />
+      <Association Name="PER_REGION_PER_PROVINCIA" Member="PER_PROVINCIA" ThisKey="CodRegion" OtherKey="CodRegion" Type="PER_PROVINCIA" />
+      <Association Name="PER_REGION_MFSProyecto" Member="MFSProyecto" ThisKey="CodPais,CodRegion" OtherKey="AmbitoPais,AmbitoRegion" Type="MFSProyecto" />
+      <Association Name="PER_PAIS_PER_REGION" Member="PER_PAIS" ThisKey="CodPais" OtherKey="CodPais" Type="PER_PAIS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFSProyUbicacion" Member="MFSProyUbicacion">
+    <Type Name="MFSProyUbicacion">
+      <Column Name="IdProyectoUbicacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdProyecto" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="AmbitoPais" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AmbitoRegion" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AmbitoUbicacion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FecIns" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaUp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IpAccess" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Pais" Type="System.String" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" CanBeNull="false" />
+      <Column Name="IdProvincia" Type="System.Int32" DbType="int" CanBeNull="true" />
+      <Column Name="Provincia" Type="System.String" CanBeNull="false" />
+      <Association Name="PER_REGION_MFSProyUbicacion" Member="PER_REGION" ThisKey="AmbitoRegion" OtherKey="CodRegion" Type="PER_REGION" IsForeignKey="true" />
+      <Association Name="MFSProyecto_MFSProyUbicacion" Member="MFSProyecto" ThisKey="IdProyecto" OtherKey="IdProyecto" Type="MFSProyecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFS_AEA_Proponente_His" Member="MFS_AEA_Proponente_His">
+    <Type Name="MFS_AEA_Proponente_His">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_programa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_entidad" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="acronimo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="num_registro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cod_pais" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="cod_regios" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nom_legal" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="app_legal" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="tipo_doc_legal" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="num_doc_legal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email_legal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefono_legal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="user_acces" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fec_ins" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fec_up" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ip_acces" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IdProvincia" Type="System.Int32" DbType="int" CanBeNull="true" />
+      <Association Name="MFS_AEA_Proponente_MFS_AEA_Proponente_His" Member="MFS_AEA_Proponente" ThisKey="UserId" OtherKey="UserId" Type="MFS_AEA_Proponente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFSFileProyecto" Member="MFSFileProyecto">
+    <Type Name="MFSFileProyecto">
+      <Column Name="IdFileProyecto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdProyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdWorkFlow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdTipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="versionfile" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TituloFile" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="extfile" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="nombrefile" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="fecupload" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ipupload" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFSCierreWorkFlow" Member="MFSCierreWorkFlow">
+    <Type Name="MFSCierreWorkFlow">
+      <Column Name="IdCierreWorkFlow" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdWorkFlow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdProyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="fechacierre" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EmailsEnviados" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFSConvocatoria" Member="MFSConvocatoria">
+    <Type Name="MFSConvocatoria">
+      <Column Name="IdConvocatoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DesConvocatoria" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="EstadoConvocatoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idPrograma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anio" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="codconvocatoria" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="nroentidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaInicio1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaFin1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="MFSConvocatoria_MFSProyecto" Member="MFSProyecto" ThisKey="IdConvocatoria" OtherKey="IdConvocatoria" Type="MFSProyecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AEA_CONSULTA" Member="AEA_CONSULTA">
+    <Type Name="AEA_CONSULTA">
+      <Column Name="idconsulta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdConvocatoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Desconvocatoria" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="referenciabases" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="antecedente" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="consulta" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="idestado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="respuesta" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="AmbitoPais" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="pais" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFS_AEA_Proponente" Member="MFS_AEA_Proponente">
+    <Type Name="MFS_AEA_Proponente">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodProponente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="CodProponenteOriginal" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="id_programa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_entidad" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="acronimo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="num_registro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cod_pais" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="cod_regios" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nom_legal" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="app_legal" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="tipo_doc_legal" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="num_doc_legal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email_legal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefono_legal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="estado_proponente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_acces" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fec_ins" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fec_up" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ip_acces" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TipoEP1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEP2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaconstitucion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TipoEP2Otro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IdProvincia" Type="System.Int32" DbType="int" CanBeNull="true" />
+      <Association Name="MFS_AEA_Proponente_MFS_AEA_Proponente_His" Member="MFS_AEA_Proponente_His" ThisKey="UserId" OtherKey="UserId" Type="MFS_AEA_Proponente_His" />
+      <Association Name="MFS_AEA_Proponente_MFSProyecto" Member="MFSProyecto" ThisKey="UserId" OtherKey="UserId" Type="MFSProyecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFS_AEAEPCONST" Member="MFS_AEAEPCONST">
+    <Type Name="MFS_AEAEPCONST">
+      <Column Name="MFS_AEAEPCONSTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MFS_AEAEPCONSTDES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOPROY1" Member="TIPOPROY1">
+    <Type Name="TIPOPROY1">
+      <Column Name="TIPOPROY1ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TIPOPROY1DES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFS_AEAEPFIN" Member="MFS_AEAEPFIN">
+    <Type Name="MFS_AEAEPFIN">
+      <Column Name="MFS_AEAEPFINid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MFS_AEAEPFINDes" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOPROY2" Member="TIPOPROY2">
+    <Type Name="TIPOPROY2">
+      <Column Name="TIPOPROY2ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TIPOPROY2DES" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_PROVINCIA" Member="PER_PROVINCIA">
+    <Type Name="PER_PROVINCIA">
+      <Column Name="IdProvincia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodProvincia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CodRegion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Provincia" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="AbrevProvincia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PER_REGION_PER_PROVINCIA" Member="PER_REGION" ThisKey="CodRegion" OtherKey="CodRegion" Type="PER_REGION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MFSProyecto" Member="MFSProyecto">
+    <Type Name="MFSProyecto">
+      <Column Name="IdProyecto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdConvocatoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodProyecto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CodProyectoOriginal" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="NombreProyecto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Regional" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmbitoPais" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AmbitoRegion" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AmbitoUbicacion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="EstadoProyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostulacionAsociada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NomCoord" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="AppCoord" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CargoCoord" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="PaisCoord" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RegionCoord" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DireccionCoord" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="EmailCoord" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FecIns" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaUp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IpAccess" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Duracionmes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="financiamientosolicitado" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="contrapartida" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EntidadAsociada1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA11" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA21" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntidadAsociada2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA12" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA22" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntidadAsociada3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA13" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA23" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TipoPy12" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tipopy2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoPy11" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idprovinciacoord" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EntidadAsociada4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA14" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA24" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntidadAsociada5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA15" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA25" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro5" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntidadAsociada6" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA16" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA26" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro6" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntidadAsociada7" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TipoEA17" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA27" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoEA2otro7" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA5" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA6" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaconstitucionEA7" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="MFSProyecto_MFSProyUbicacion" Member="MFSProyUbicacion" ThisKey="IdProyecto" OtherKey="IdProyecto" Type="MFSProyUbicacion" />
+      <Association Name="MFSConvocatoria_MFSProyecto" Member="MFSConvocatoria" ThisKey="IdConvocatoria" OtherKey="IdConvocatoria" Type="MFSConvocatoria" IsForeignKey="true" />
+      <Association Name="MFS_AEA_Proponente_MFSProyecto" Member="MFS_AEA_Proponente" ThisKey="UserId" OtherKey="UserId" Type="MFS_AEA_Proponente" IsForeignKey="true" />
+      <Association Name="PER_REGION_MFSProyecto" Member="PER_REGION" ThisKey="AmbitoPais,AmbitoRegion" OtherKey="CodPais,CodRegion" Type="PER_REGION" IsForeignKey="true" />
+      <Association Name="PER_PAIS_MFSProyecto" Member="PER_PAIS" ThisKey="AmbitoPais" OtherKey="CodPais" Type="PER_PAIS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.DelUbicacionesProyecto" Method="DelUbicacionesProyecto">
+    <Parameter Name="idProyecto" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DelFileProyecto" Method="DelFileProyecto">
+    <Parameter Name="idProyecto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdWorkFlow" Parameter="idWorkFlow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdTipo" Parameter="idTipo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GETNroProponente" Method="GETNroProponente" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.GETfechahora" Method="GETfechahora" IsComposable="true">
+    <Return Type="System.DateTime" />
+  </Function>
+</Database>

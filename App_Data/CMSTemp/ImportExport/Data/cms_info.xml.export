@@ -1,0 +1,32 @@
+﻿<cms_info version="6.0">
+  <NewDataSet>
+    <cms_info>
+      <Key>machinename</Key>
+      <Value>PER-DC09</Value>
+    </cms_info>
+    <cms_info>
+      <Key>domainname</Key>
+      <Value>energiayambienteandina.net</Value>
+    </cms_info>
+    <cms_info>
+      <Key>currentuser</Key>
+      <Value>administrator</Value>
+    </cms_info>
+    <cms_info>
+      <Key>starttime</Key>
+      <Value>02/03/2015 9:18:44</Value>
+    </cms_info>
+    <cms_info>
+      <Key>systemversion</Key>
+      <Value>0.0.0.0 </Value>
+    </cms_info>
+    <cms_info>
+      <Key>hotfixversion</Key>
+      <Value>23</Value>
+    </cms_info>
+    <cms_info>
+      <Key>webapplication</Key>
+      <Value>False</Value>
+    </cms_info>
+  </NewDataSet>
+</cms_info>

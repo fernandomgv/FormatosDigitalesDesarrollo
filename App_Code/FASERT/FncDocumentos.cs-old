@@ -1,0 +1,131 @@
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+
+using CMS.CMSHelper;
+using CMS.UIControls;
+using CMS.TreeEngine;
+using CMS.IDataConnectionLibrary;
+using CMS.GlobalHelper;
+
+/// <summary>
+/// News Page.
+/// Author: Tom Miller.
+/// </summary>
+public class FncDocumentos
+{
+    
+
+    private string NextDocumentAliasPath(int documentId)
+    {
+        TreeProvider provider = new TreeProvider();
+        DataSet ds = provider.Connection.ExecuteQuery
+            (string.Format("select top 1 * from View_CONTENT_news_Joined where DocumentID<{0} order by documentid desc",
+            ValidationHelper.GetInteger(documentId, 0)), 
+            null, QueryTypeEnum.SQLQuery, 
+            false);
+
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            string nextDocumentAliasPath = ds.Tables[0].Rows[0]["NodeAliasPath"].ToString();
+            return nextDocumentAliasPath;
+        }
+        return string.Empty;
+    }
+
+	public static  string NextDocumentAliasPathF(int documentId)
+    {
+        
+	TreeProvider provider = new TreeProvider();
+	/* obtener documentid desde newsid  */
+	DataSet ds1 = provider.Connection.ExecuteQuery
+            (string.Format("select DocumentID  from View_CONTENT_news_Joined where NewsID={0} ",
+            ValidationHelper.GetInteger(documentId, 0)), 
+            null, QueryTypeEnum.SQLQuery, 
+            false);
+	int documentid1=0;
+
+        if (ds1.Tables[0].Rows.Count > 0)
+        {
+            documentid1 = (int) ds1.Tables[0].Rows[0]["DocumentID"];
+            
+        }
+	
+	//return documentid1.ToString();
+
+        DataSet ds = provider.Connection.ExecuteQuery
+            (string.Format("select top 1 * from View_CONTENT_news_Joined where DocumentID>{0} and Published=1 and sitename = 'MFSANDINANew' and Left(NodealiasPath,29)='/Noticias/noticias-forestales' order by NewsReleaseDate asc, DocumentCreatedWhen asc",
+            ValidationHelper.GetInteger(documentid1, 0)), 
+            null, QueryTypeEnum.SQLQuery, 
+            false);
+
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            string nextDocumentAliasPath = ds.Tables[0].Rows[0]["NodeAliasPath"].ToString();
+	    nextDocumentAliasPath = "~"+ nextDocumentAliasPath +".aspx";
+            return nextDocumentAliasPath;
+        }
+        return string.Empty;
+    }
+
+public static string PreviousDocumentAliasPathF(int documentId)
+    {
+        TreeProvider provider = new TreeProvider();
+	/* obtener documentid desde newsid  */
+	DataSet ds1 = provider.Connection.ExecuteQuery
+            (string.Format("select DocumentID  from View_CONTENT_news_Joined where NewsID={0} ",
+            ValidationHelper.GetInteger(documentId, 0)), 
+            null, QueryTypeEnum.SQLQuery, 
+            false);
+	int documentid1=0;
+
+        if (ds1.Tables[0].Rows.Count > 0)
+        {
+            documentid1 = (int) ds1.Tables[0].Rows[0]["DocumentID"];
+            
+        }
+	
+	//return documentid1.ToString();
+        DataSet ds = provider.Connection.ExecuteQuery
+            (string.Format("select top 1 * from View_CONTENT_news_Joined where DocumentID<{0} and Published=1 and sitename = 'MFSANDINANew' and Left(NodealiasPath,29)='/Noticias/noticias-forestales' order by NewsReleaseDate desc, DocumentCreatedWhen desc",
+            ValidationHelper.GetInteger(documentid1, 0)),
+            null, QueryTypeEnum.SQLQuery,
+            false);
+
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            string previousDocumentAliasPath = ds.Tables[0].Rows[0]["NodeAliasPath"].ToString();
+	    previousDocumentAliasPath = "~"+ previousDocumentAliasPath +".aspx";
+            return previousDocumentAliasPath;
+        }
+        return string.Empty;
+    }
+
+	
+    private static string PreviousDocumentAliasPath(int documentId)
+    {
+        TreeProvider provider = new TreeProvider();
+        DataSet ds = provider.Connection.ExecuteQuery
+            (string.Format("select top 1 * from View_CONTENT_news_Joined where DocumentID>{0} order by documentid",
+            ValidationHelper.GetInteger(documentId, 0)),
+            null, QueryTypeEnum.SQLQuery,
+            false);
+
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            string previousDocumentAliasPath = ds.Tables[0].Rows[0]["NodeAliasPath"].ToString();
+            return previousDocumentAliasPath;
+        }
+        return string.Empty;
+    }
+	
+}

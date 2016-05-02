@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.625, 18.5" name="MFS">
+  <DataContextMoniker Name="/MFSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4a4a8d7b-3b65-4cfc-844d-aa6c044e7c14" isExpanded="false" absoluteBounds="9.125, 6.625, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/PER_PAIS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7e05315-79b0-4d75-987b-204d7314be18" absoluteBounds="9.14, 7.0850000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ecf80fee-d279-42c2-a5c7-aa49fb09d6e5" absoluteBounds="5.375, 7.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MFSDataContext/PER_REGION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5612dec-e4b5-4e51-bf1c-c7c6e8a38817" absoluteBounds="5.3900000000000006, 7.7100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29e4338f-3579-4f8e-bf28-60546ab856cc" absoluteBounds="8.125, 7.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/MFSDataContext/MFSProyUbicacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7be24ef3-2b26-4e17-9186-3d2dfa76c33e" absoluteBounds="8.14, 8.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.125 : 6.85); (6.375 : 6.85); (6.375 : 7.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MFSDataContext/PER_PAIS/PER_PAIS_PER_REGION" />
+      <nodes>
+        <classShapeMoniker Id="4a4a8d7b-3b65-4cfc-844d-aa6c044e7c14" />
+        <classShapeMoniker Id="ecf80fee-d279-42c2-a5c7-aa49fb09d6e5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 8.35179768880208); (8.125 : 8.35179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MFSDataContext/PER_REGION/PER_REGION_MFSProyUbicacion" />
+      <nodes>
+        <classShapeMoniker Id="ecf80fee-d279-42c2-a5c7-aa49fb09d6e5" />
+        <classShapeMoniker Id="29e4338f-3579-4f8e-bf28-60546ab856cc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6cff9b6b-17d5-49b8-8e10-e05cf5fe1ff7" absoluteBounds="10.375, 0.875, 2, 4.8477197265625">
+      <DataClassMoniker Name="/MFSDataContext/MFS_AEA_Proponente_His" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9f14aea-ccfb-44d7-83fc-e36d72d31063" absoluteBounds="10.39, 1.335, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="638a444b-7e52-4fed-a7e5-81251f9c08e5" isExpanded="false" absoluteBounds="0.5, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/MFSFileProyecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ea725ce-271b-4207-8f67-8f6ce154ef55" absoluteBounds="0.51500000000000012, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="300c5288-c0ba-4a6b-b565-a92468181286" isExpanded="false" absoluteBounds="0.5, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/MFSCierreWorkFlow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5dd8561-955c-4822-a8e0-1d5b383495ec" absoluteBounds="0.515, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab42c69d-7355-4abf-945f-341d670e84cf" isExpanded="false" absoluteBounds="5.5, 10.5, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/MFSConvocatoria" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b666eb1b-b8b1-4a6f-9817-f131322a6121" absoluteBounds="5.5150000000000006, 10.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97b6f2a6-f521-46cd-91e1-f6c04010c41f" isExpanded="false" absoluteBounds="0.5, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/AEA_CONSULTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6c875ea-9ad2-4bc0-b061-d63d972bce1e" absoluteBounds="0.51499999999999968, 1.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae8ac61f-1da9-44c9-abe9-b42ac12c88d3" absoluteBounds="5.625, 0.5, 2, 6.0015283203125">
+      <DataClassMoniker Name="/MFSDataContext/MFS_AEA_Proponente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5024242-7a3c-43e0-bb9f-8edf94af5bf9" absoluteBounds="5.64, 0.96, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.625 : 1.84375); (10.375 : 1.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MFSDataContext/MFS_AEA_Proponente/MFS_AEA_Proponente_MFS_AEA_Proponente_His" />
+      <nodes>
+        <classShapeMoniker Id="ae8ac61f-1da9-44c9-abe9-b42ac12c88d3" />
+        <classShapeMoniker Id="6cff9b6b-17d5-49b8-8e10-e05cf5fe1ff7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="992d5960-5aaf-4652-a357-fdacf31b2702" isExpanded="false" absoluteBounds="3.125, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/MFS_AEAEPCONST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="519f1938-826b-46ce-b76e-92e5eb0b2738" absoluteBounds="3.1400000000000006, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d3ea7c7-48d6-4507-8d40-a831fd83f3fc" isExpanded="false" absoluteBounds="0.5, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/TIPOPROY1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9dae0182-9277-4dac-80df-4e6b1089cb3f" absoluteBounds="0.51500000000000012, 2.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae3ba265-5337-4513-83a8-807fec85fba7" isExpanded="false" absoluteBounds="3.125, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/MFS_AEAEPFIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5ab5d6e-258a-4fdb-8b85-bc17d13dc66a" absoluteBounds="3.14, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0ca43cf-26c9-4187-938f-b8d22571b9d1" isExpanded="false" absoluteBounds="0.5, 6.25, 2, 0.45">
+      <DataClassMoniker Name="/MFSDataContext/TIPOPROY2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57f7ccd0-4306-49b2-8b13-b7abfc63b140" absoluteBounds="0.515, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="436488a7-70d8-45dd-aed2-2938bdf773ae" absoluteBounds="0.5, 8.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MFSDataContext/PER_PROVINCIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab66d298-c0f3-4790-9078-256fb5e9eb4c" absoluteBounds="0.51499999999999968, 9.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 8.46519853320313); (5.25 : 8.46519853320313); (5.25 : 3.50260416666667); (0.625 : 3.50260416666667); (0.625 : 8.25); (1.5 : 8.25); (1.5 : 8.625)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MFSDataContext/PER_REGION/PER_REGION_PER_PROVINCIA" />
+      <nodes>
+        <classShapeMoniker Id="ecf80fee-d279-42c2-a5c7-aa49fb09d6e5" />
+        <classShapeMoniker Id="436488a7-70d8-45dd-aed2-2938bdf773ae" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="50e13195-8814-4f26-b9d7-ba3d577b983e" absoluteBounds="2.875, 5, 2, 13.308982747395833">
+      <DataClassMoniker Name="/MFSDataContext/MFSProyecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ae35a7e-758b-434f-8689-6e409bf7030e" absoluteBounds="2.89, 5.46, 1.9700000000000002, 12.748982747395832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 10.725); (4.875 : 10.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MFSDataContext/MFSConvocatoria/MFSConvocatoria_MFSProyecto" />
+      <nodes>
+        <classShapeMoniker Id="ab42c69d-7355-4abf-945f-341d670e84cf" />
+        <classShapeMoniker Id="50e13195-8814-4f26-b9d7-ba3d577b983e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 5.75076416015625); (5.33333333333333 : 5.75076416015625 : JumpStart); (5.16666666666667 : 5.75076416015625 : JumpEnd); (4.875 : 5.75076416015625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MFSDataContext/MFS_AEA_Proponente/MFS_AEA_Proponente_MFSProyecto" />
+      <nodes>
+        <classShapeMoniker Id="ae8ac61f-1da9-44c9-abe9-b42ac12c88d3" />
+        <classShapeMoniker Id="50e13195-8814-4f26-b9d7-ba3d577b983e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 7.79509926660156); (5.33333333333333 : 7.79509926660156 : JumpStart); (5.16666666666667 : 7.79509926660156 : JumpEnd); (4.875 : 7.79509926660156)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MFSDataContext/PER_REGION/PER_REGION_MFSProyecto" />
+      <nodes>
+        <classShapeMoniker Id="ecf80fee-d279-42c2-a5c7-aa49fb09d6e5" />
+        <classShapeMoniker Id="50e13195-8814-4f26-b9d7-ba3d577b983e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.125 : 6.675); (5.33333333333333 : 6.675 : JumpStart); (5.16666666666667 : 6.675 : JumpEnd); (4.875 : 6.675)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MFSDataContext/PER_PAIS/PER_PAIS_MFSProyecto" />
+      <nodes>
+        <classShapeMoniker Id="4a4a8d7b-3b65-4cfc-844d-aa6c044e7c14" />
+        <classShapeMoniker Id="50e13195-8814-4f26-b9d7-ba3d577b983e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 9.66429768880208); (8.125 : 9.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MFSDataContext/MFSProyecto/MFSProyecto_MFSProyUbicacion" />
+      <nodes>
+        <classShapeMoniker Id="50e13195-8814-4f26-b9d7-ba3d577b983e" />
+        <classShapeMoniker Id="29e4338f-3579-4f8e-bf28-60546ab856cc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
