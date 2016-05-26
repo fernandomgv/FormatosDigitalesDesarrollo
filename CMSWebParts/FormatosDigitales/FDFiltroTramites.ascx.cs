@@ -86,6 +86,33 @@ public partial class CMSWebParts_FormatosDigitales_FDFiltroTramites : CMSAbstrac
             }
  }
 
+
+    protected void GetListadoTipoFormato()
+    {
+        DataSet Proyectos = new DataSet();
+        QueryDataParameters parameters1 = new QueryDataParameters();
+        parameters1.Add("@IdUsuario", this.UserIDSMI);
+        Proyectos = ConnectionHelper.ExecuteQuery("FD.FormatoDigital.ListadoTipoFormato", parameters1);
+
+        ListItem todos = new ListItem();
+        todos.Value = "0";
+        todos.Text = "Todos";
+        this.DdlProyectos.Items.Add(todos);
+
+        if (!DataHelper.DataSourceIsEmpty(Proyectos))
+        {
+
+
+            foreach (DataRow p in Proyectos.Tables[0].Rows)
+            {
+                ListItem proyecto = new ListItem();
+                proyecto.Value = ValidationHelper.GetString(p["ItemId"].ToString(), "");
+                proyecto.Text = ValidationHelper.GetString(p["Nombre"].ToString(), "");
+                this.DdlProyectos.Items.Add(proyecto);
+            }
+        }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!this.Page.IsPostBack)

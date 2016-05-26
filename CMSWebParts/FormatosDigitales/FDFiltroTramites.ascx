@@ -6,10 +6,10 @@
     </asp:DropDownList>
 </div>
 <div>
-    <asp:Label ID="Lbltramite" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Lbltramite" runat="server" Text="lblTramite"></asp:Label>
     <asp:DropDownList ID="DdlTramites" runat="server" AutoPostBack="True">
     </asp:DropDownList>
-    <asp:Label ID="LblEstado" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="LblEstado" runat="server" Text="lblEstado"></asp:Label>
     <asp:DropDownList ID="DdlEstados" runat="server">
     </asp:DropDownList>
 </div>
