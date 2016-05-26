@@ -86,11 +86,129 @@ public partial class CMSWebParts_FormatosDigitales_FDFiltroTramites : CMSAbstrac
             }
  }
 
+
+    protected void GetListadoTipoFormato()
+    {
+        DataSet Proyectos = new DataSet();
+        Proyectos = ConnectionHelper.ExecuteQuery("FD.FormatoDigital.ListadoTipoFormato", null);
+
+        ListItem todos = new ListItem();
+        todos.Value = "0";
+        todos.Text = "Todos";
+        this.DdlTramites.Items.Add(todos);
+
+        if (!DataHelper.DataSourceIsEmpty(Proyectos))
+        {
+
+
+            foreach (DataRow p in Proyectos.Tables[0].Rows)
+            {
+                ListItem proyecto = new ListItem();
+                proyecto.Value = ValidationHelper.GetString(p["ItemId"].ToString(), "");
+                proyecto.Text = ValidationHelper.GetString(p["Nombre"].ToString(), "");
+                this.DdlTramites.Items.Add(proyecto);
+            }
+        }
+    }
+
+
+    protected void GetListadoEstadoPorFormato(string idFormatoDigitalSeleccionado)
+    {
+        DataSet Proyectos = new DataSet();
+        QueryDataParameters parameters1 = new QueryDataParameters();
+        parameters1.Add("@IdFormatoDigitalSeleccionado", idFormatoDigitalSeleccionado);
+        Proyectos = ConnectionHelper.ExecuteQuery("FD.FD_EstadoFormatoDigital.GetListadoEstadoPorFormato", parameters1);
+
+        ListItem todos = new ListItem();
+        todos.Value = "0";
+        todos.Text = "Todos";
+        this.DdlEstados.Items.Add(todos);
+
+        if (!DataHelper.DataSourceIsEmpty(Proyectos))
+        {
+            foreach (DataRow p in Proyectos.Tables[0].Rows)
+            {
+                ListItem proyecto = new ListItem();
+                proyecto.Value = ValidationHelper.GetString(p["ItemId"].ToString(), "");
+                proyecto.Text = ValidationHelper.GetString(p["NombreEstado"].ToString(), "");
+                this.DdlEstados.Items.Add(proyecto);
+            }
+        }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        string idp = CMS.GlobalHelper.URLHelper.GetQueryValue(CMS.GlobalHelper.URLHelper.CurrentURL, "idp");
+        string idt = CMS.GlobalHelper.URLHelper.GetQueryValue(CMS.GlobalHelper.URLHelper.CurrentURL, "idt");
+        string  ide = CMS.GlobalHelper.URLHelper.GetQueryValue(CMS.GlobalHelper.URLHelper.CurrentURL, "ide");
+        string fi = CMS.GlobalHelper.URLHelper.GetQueryValue(CMS.GlobalHelper.URLHelper.CurrentURL, "fi");
+        string ff = CMS.GlobalHelper.URLHelper.GetQueryValue(CMS.GlobalHelper.URLHelper.CurrentURL, "ff");
+
+        if (!string.IsNullOrEmpty(idp))
+        {
+            this.lblMensaje.Text = "Mostrando resultados filtrados para [" + idp + "]";
+        }
+        else { this.lblMensaje.Text = ""; }
+
+        
+
         if (!this.Page.IsPostBack)
         {
             GetProyectoSMI();
+            GetListadoTipoFormato();
         } 
+    }
+
+
+    protected void DdlTramites_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        DdlEstados.Items.Clear();
+        if (DdlTramites.SelectedValue != "0")
+        {
+            DdlEstados.Enabled = true;
+            GetListadoEstadoPorFormato(DdlTramites.SelectedValue);
+        }
+        else
+        {
+            DdlEstados.Enabled = false;
+        }
+        
+    }
+
+    protected void BtnFiltrar_Click(object sender, EventArgs e)
+    {
+        string url = "";
+        string IDP = "";
+        string IDT = "";
+        string IDE = "";
+        string FI = "";
+        string FF = "";
+        url = CMS.GlobalHelper.URLHelper.CurrentURL;
+        url = CMS.GlobalHelper.URLHelper.RemoveQuery(url);
+            
+        IDP = DdlProyectos.SelectedValue;
+        IDT = DdlTramites.SelectedValue;
+        if (!string.IsNullOrEmpty(DdlEstados.SelectedValue))
+        {
+            IDE = DdlEstados.SelectedValue;
+        }
+        else {
+            IDE = "-1";  // cuando es negativo indica que no ha sido seleccionado el comboEstado
+        }
+        
+        FI  = TxtFechaIni.Text.Trim();        
+        FF  = TxtFechaFin.Text.Trim();
+
+        //if (IDP != "0" | IDT!= "0"| IDE != "0" | FI != "" | FF != "")               
+        //if (DdlProyectos.SelectedIndex != 0)
+
+        if (IDP != "0" | IDT != "0" | FI != "" | FF != "")  
+        {
+            url = url + "?idp=" + IDP + "&idt=" + IDT + "&ide=" + IDE + "&fi=" + FI + "&ff=" + FF;
+        }
+        this.Page.Response.Redirect(url);
+
+            
     }
 }
