@@ -35,21 +35,23 @@
                 </trirand:JQGridColumn>  
                 
             <trirand:JQGridColumn 
-                DataField="OrderID" 
+                HeaderText="Tramite ID" 
+                DataField="ItemID" 
                 Searchable="true"
                 SearchToolBarOperation="IsEqualTo"
                 DataType="Int"
-                HeaderText="Order ID" 
                 PrimaryKey="True" 
                 Width="50" />
             <trirand:JQGridColumn
-                DataField="CustomerID" 
+                HeaderText="Proyecto" 
+                DataField="proyecto" 
                 DataType="String"
                 SearchType="DropDown" 
                 SearchControlID="DropDownList1"
                 SearchToolBarOperation="IsEqualTo"  />
             <trirand:JQGridColumn 
-                DataField="OrderDate" 
+                HeaderText="Fecha" 
+                DataField="ItemCreatedWhen" 
                 Searchable="true" 
                 SearchType="DatePicker"
                 SearchControlID="DatePicker1"              
@@ -58,18 +60,20 @@
                 ShowToolTip="false"
                 DataFormatString="{0:MMM/d/yyyy}"/>
              <trirand:JQGridColumn 
-                DataField="Freight"  
+                HeaderText="Formato" 
+                DataField="formato"  
                 SearchType="DropDown"
-                DataType="Decimal"
-                SearchValues="[All]:[All];10:> 10;20:> 20;30:> 30;50:> 50" 
-                SearchToolBarOperation="IsGreaterThan" />    
+                DataType="String"
+                SearchValues="[All]:[All];Requerimiento:Requerimiento;SBS:SBS" 
+                SearchToolBarOperation="IsEqualTo" />    
             <trirand:JQGridColumn 
+                HeaderText="Estado" 
                 Searchable="true"
                 DataType="String"
                 SearchType="AutoComplete"
                 SearchControlID="AutoComplete1"
                 SearchToolBarOperation="Contains"
-                DataField="ShipName" 
+                DataField="estado" 
                 Width="200" />                      
         </Columns> 
                                    
