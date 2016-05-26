@@ -17,7 +17,7 @@
 <div>
     <asp:Label ID="LblFechaIni" runat="server" Text="FechaIni"></asp:Label>
     <asp:TextBox ID="TxtFechaIni" runat="server"></asp:TextBox>
-    <asp:Label ID="LblFechaFin" runat="server" Text="FechaFIn"></asp:Label>
+    <asp:Label ID="LblFechaFin" runat="server" Text="FechaFin"></asp:Label>
     <asp:TextBox ID="TxtFechaFin" runat="server"></asp:TextBox>
     <asp:Button ID="BtnFiltrar" runat="server" Text="Filtrar" 
         onclick="BtnFiltrar_Click" />

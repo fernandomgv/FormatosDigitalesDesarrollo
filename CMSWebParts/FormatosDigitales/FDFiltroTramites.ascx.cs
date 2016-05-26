@@ -186,28 +186,45 @@ public partial class CMSWebParts_FormatosDigitales_FDFiltroTramites : CMSAbstrac
         string FF = "";
         url = CMS.GlobalHelper.URLHelper.CurrentURL;
         url = CMS.GlobalHelper.URLHelper.RemoveQuery(url);
+
+        if (!string.IsNullOrEmpty(DdlProyectos.SelectedValue))
+        {
+            if (DdlProyectos.SelectedValue != "0")
+            {
+                url = CMS.GlobalHelper.URLHelper.AddParameterToUrl(url, "IDP", DdlProyectos.SelectedValue);
+            }
+        }
             
-        IDP = DdlProyectos.SelectedValue;
-        IDT = DdlTramites.SelectedValue;
+        if (!string.IsNullOrEmpty(DdlTramites.SelectedValue))
+        {
+            if (DdlTramites.SelectedValue != "0")
+             {
+                 url= CMS.GlobalHelper.URLHelper.AddParameterToUrl(url, "IDT", DdlTramites.SelectedValue);
+            }
+        }
         if (!string.IsNullOrEmpty(DdlEstados.SelectedValue))
         {
-            IDE = DdlEstados.SelectedValue;
+            if (DdlEstados.SelectedValue != "0")
+            {
+                url = CMS.GlobalHelper.URLHelper.AddParameterToUrl(url, "IDE", DdlEstados.SelectedValue);
+            }
         }
-        else {
-            IDE = "-1";  // cuando es negativo indica que no ha sido seleccionado el comboEstado
+
+        if (!string.IsNullOrEmpty(TxtFechaIni.Text))
+        {
+             url = CMS.GlobalHelper.URLHelper.AddParameterToUrl(url, "FI", TxtFechaIni.Text);          
+        }
+
+        if (!string.IsNullOrEmpty(TxtFechaFin.Text))
+        {
+            url = CMS.GlobalHelper.URLHelper.AddParameterToUrl(url, "FF", TxtFechaFin.Text);           
         }
         
-        FI  = TxtFechaIni.Text.Trim();        
-        FF  = TxtFechaFin.Text.Trim();
-
-        //if (IDP != "0" | IDT!= "0"| IDE != "0" | FI != "" | FF != "")               
-        //if (DdlProyectos.SelectedIndex != 0)
-
-        if (IDP != "0" | IDT != "0" | FI != "" | FF != "")  
-        {
-            url = url + "?idp=" + IDP + "&idt=" + IDT + "&ide=" + IDE + "&fi=" + FI + "&ff=" + FF;
-        }
         this.Page.Response.Redirect(url);
+
+
+
+        
 
             
     }
