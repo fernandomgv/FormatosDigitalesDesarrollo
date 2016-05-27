@@ -80,7 +80,9 @@ public partial class CMSWebParts_FormatosDigitales_FDFiltroTramites : CMSAbstrac
                 {
                     ListItem proyecto = new ListItem();
                     proyecto.Value = ValidationHelper.GetString(p["Idproyecto"].ToString(), "");
-                    proyecto.Text = ValidationHelper.GetString(p["nombre"].ToString(), "");
+                    string nombrep = ValidationHelper.GetString(p["Nombre"].ToString(), "");
+                    proyecto.Text = (nombrep.Length > 100) ? nombrep.Substring(0, 99) + "..." : nombrep;
+
                     this.DdlProyectos.Items.Add(proyecto);                    
                 }
             }
@@ -105,7 +107,7 @@ public partial class CMSWebParts_FormatosDigitales_FDFiltroTramites : CMSAbstrac
             {
                 ListItem proyecto = new ListItem();
                 proyecto.Value = ValidationHelper.GetString(p["ItemId"].ToString(), "");
-                proyecto.Text = ValidationHelper.GetString(p["Nombre"].ToString(), "");
+                proyecto.Text = ValidationHelper.GetString(p["nombre"].ToString(), "");
                 this.DdlTramites.Items.Add(proyecto);
             }
         }
